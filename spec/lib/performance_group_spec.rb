@@ -17,4 +17,9 @@ describe 'a PeformanceGroup' do
   	@foo.albums = albums
   	expect(@foo.albums).to eq albums
   end
+  it 'prints a list of albums' do
+  	albums = ["Help!", "A Hard Day's Night", "Sgt. Pepper's Lonely Hearts Club Band"]
+  	@foo.albums = albums
+  	expect(@foo.list_albums).to eq "Help!\\nA Hard Day's Night\\nSgt. Pepper's Lonely Hearts Club Band\\n"
+  end
 end
